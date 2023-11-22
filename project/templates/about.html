@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <style>
+        .about-section {
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            text-align: center;
+        }
+        .about-section h1 {
+            font-size: 3em;
+            margin-top: 10px;
+        }
+        .about-section p {
+            font-size: 1.4em;
+            line-height: 1.8;
+        }
+        .about-section .about-image {
+            max-width: 300px;
+            margin: 30px auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .about-section__content {
+            position: relative;
+            text-align: left;
+            padding: 20px;
+        }
+        .developer-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .developer-card__photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .developer-card__info {
+            flex: 1;
+        }
+        .developer-card__name {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        .developer-card__details {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="about-section">
+        <div class="about-section__content">
+            <h1>Welcome to illegal.USA</h1>
+            <p>Your one-stop guide to navigating the complexities of immigration in the United States.</p>
+            <p>We're committed to providing you with accurate, up-to-date information and resources to help you make informed decisions about your immigration journey.</p>
+
+            <h2>About the Team</h2>
+            <p>The illegal.USA team is a group of experienced immigration attorneys and paralegals who are passionate about helping people achieve their immigration goals. We have a deep understanding of the complex US immigration system and are committed to providing our clients with the highest quality legal representation.</p>
+
+            <h2>Success Stories</h2>
+            <p>We have helped countless individuals and families successfully immigrate to the United States. Here are just a few examples:</p>
+            <ul>
+                <li>Client A obtained a green card through family sponsorship.</li>
+                <li>Client B received a work visa based on her extraordinary abilities in the field of science.</li>
+                <li>Client C secured asylum after fleeing persecution in her home country.</li>
+            </ul>
+
+            <h2>Benefits of Using illegal.USA</h2>
+            <p>There are many benefits to using illegal.USA's services, including:</p>
+            <ul>
+                <li>Our experience: We have a proven track record of success in immigration cases.</li>
+                <li>Our expertise: Our attorneys are experts in all areas of US immigration law.</li>
+                <li>Our commitment to our clients: We are dedicated to providing our clients with the best possible legal representation.</li>
+            </ul>
+
+            <h2>Meet Our Developers</h2>
+            <div class="developer-cards">
+                <div class="developer-card row">
+                    <img src="https://picsum.photos/200/300?image=1000" class="developer-card__photo" alt="Developer Photo">
+                    <div class="developer-card__info">
+                        <h2 class="developer-card__name"> Kenzhetayev Yersultan </h2>
+                        <p class="developer-card__details">
+                                Full-Stack Developer | 19 years old | USA | +1 234 567 890 | NailZ314@illegal.USA | NailZ314@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="developer-cards">
+                <div class="developer-card row">
+                    <img src="https://picsum.photos/200/300?image=1001" class="developer-card__photo" alt="Developer Photo">
+                    <div class="developer-card__info">
+                        <h2 class="developer-card__name">Zhaksylyk Alisher</h2>
+                        <p class="developer-card__details">
+                            Front-End Developer | 19 years old | Canada | +1 987 654 321 | kotangokky@illegal.USA | kotangokky@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="developer-cards">
+                <div class="developer-card row">
+                    <img src="https://picsum.photos/200/300?image=1002" class="developer-card__photo" alt="Developer Photo">
+                    <div class="developer-card__info">
+                        <h2 class="developer-card__name">Amalbek Yernur</h2>
+                        <p class="developer-card__details">
+                            Back-End Developer | 19 years old | Kazakhstan | +1 456 789 012 | yernur001@illegal.USA | yernur@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-dark w-25 " data-toggle="collapse" data-target="#demo">Contact Information</button>
+            <br>
+            <div id="demo" class="collapse">
+            <p>
+                <br>We invite you to contact us for a free consultation to discuss your immigration needs.</p>
+            <hr>
+                <p>
+                Email: info@illegal.usa<br>
+                Phone: +7 777 777 77 77<br>
+            </p>
+            </div>
+            <br>
+            <h2>Call to Action</h2>
+            <p> Schedule a free consultation today to learn more about how illegal.
+                USA can help you achieve your immigration goals.</p>
+            <a href="#">Schedule a Consultation</a>
+        </div>
+    </div>
+{% endblock %}
+        {% block scripts %}
+    {{ super() }}
+{% endblock %}
+

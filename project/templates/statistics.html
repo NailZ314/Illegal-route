@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <style>
+         .next{
+            padding-top: 100px;
+            text-align: center;
+            width:100%;
+        }
+        .next {
+            font-family: 'Arial', sans-serif;
+        }
+        .next h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .next p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+        strong{
+            padding-top: 50px;
+            font-size: 2.5em;
+            color: #333;
+        }
+        .fonk{
+        font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+        .statistics-section {
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .statistics-section h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .statistics-section p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-1"></div>
+   <div class="col-10">
+       <div>
+    <div class="next">
+        <div class="row">
+            <div class="col-md-5">
+                <h1>Where are illegal foreigners going inside the U.S.?</h1>
+                <p>
+                    Obviously, most illegal aliens live in the states adjacent to the border with poorer countries:
+                    Mexico, Cuba, and so on. These are California, Arizona, New Mexico, Texas, Florida.
+                </p>
+                <p>
+                    Strange as it may seem, there are also states in the north with a large number of illegal immigrants in the US. But the south, of course, is more comfortable:
+                    here you have a constant need for cheap labor (agricultural business), and winters without snow, and the laws are more liberal (read about it at the end of the article).
+                </p>
+            </div>
+            <div class="col-md-7">
+                <iframe id="mapFrame" width="80%" height="400px" frameborder="0" class="mt-1"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+   </div>
+    <div class="col-1"></div>
+</div>
+    <div>
+    <div class="statistics-section">
+        <h1>Statistics</h1>
+        <p>Explore immigration trends and numbers:</p>
+
+        <div>
+
+            <div class="row">
+                <div class="col-md-5 ml-auto mr-auto">
+                    <br><br><br><br>
+                    <strong>Why is it convenient from Mexico!</strong>
+                    <p class="fonk">The path through Mexico may be chosen for several reasons. Some people choose
+                        this route because of legalization of status or the possibility of obtaining asylum in the United States. Mexico has become an
+                        intermediate point for many migrants from various countries seeking to enter the U.S. because of more accessible routes or other circumstances.
+                        Graphs and data often show that a significant number
+                        of migrants go through Mexico because it may be the most accessible or safe route for them. However, it is a complex and risky route that
+                        requires overcoming many challenges and raises many questions in terms of legality and safety for migrants.
+                        Each case is unique, and the decision to choose to travel to another country is the result of many factors, including personal circumstances and opportunities.</p>
+                </div>
+                <div class="col-md-5 ml-auto mr-auto">
+                    <img src="data:image/png;base64,{{ plot_url }}" alt="Matplotlib Graph">
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div class="statistics-info">
+            <h3>Key Insights:</h3>
+            <p>• Over the past decade, immigration to the US has increased by X%.</p>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+        <script>
+            function generateMap2() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', '/generate_map2', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        document.getElementById('mapFrame').srcdoc = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+            window.onload = function () {
+                generateMap2();
+            };
+        </script>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <style>
+        .partner {
+            position: relative;
+            font-size: 30px;
+            color: white;
+            background-image: url("https://thumb.tildacdn.com/tild3935-3862-4637-b337-333032333838/-/format/webp/losangeles1790986_1920.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .partner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        .partnership-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        .partnership-section h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .partnership-section p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .partner-logos img {
+            max-width: 150px;
+            max-height: 100px;
+            margin: 10px;
+        }
+        .testimonial {
+            margin-top: 40px;
+            text-align: left;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .partner-logos img{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="partner" >
+    <div class="container" field="text" >
+        <div style="center:left;" data-customstyle="yes">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <strong>
+                25% of 18 to 24 year olds
+            </strong>
+            <br>
+            <strong> 16% of citizens from 25 to 34 years old</strong>
+            <br>
+            <span>
+            <br>
+            <strong>32% of citizens from 18 to 24 years old</strong>
+            <br>
+            <br> want to leave Kazakhstan. Ideally, to the USA.<br>
+                <br> Total for 1 year<strong> of those willing to move within 1-2 years has doubled</strong> more (17%).
+                <strong>Those planning to move within 3-5 years are already 12%</strong>.
+                <br>
+                <br> <br><br><br><br><br><br>
+            </span>
+        </div>
+    </div>
+
+</div>
+    <div class="partnership-section">
+        <h1>Partnership</h1>
+        <p>We're proud to collaborate with leading organizations in the immigration industry:</p>
+        <p>
+            <b>
+                Our target audience understands what they want,
+                and have the means to move in that direction.
+                So it's your audience, too.
+            </b>
+        </p>
+        <p>
+                "USA.illegal" is a unique format to showcase products or services needed by both travelers (tourists), immigrants ,
+            and ordinary viewers who "want to see life in another country".
+        </p>
+        <div class="partner-logos">
+            <img src="https://uploads.mwp.mprod.getusinfo.com/uploads/sites/90/2022/05/usm-kazakhstan-seal-e1652121688492.jpg" alt="Partner 2 Logo">
+            <img src="data:image/png;base64,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" alt="Partner 1 Logo">
+            <img src="data:image/png;base64,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" alt="Partner 2 Logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAY1BMVEX///8AAABvb2/y8vLt7e3m5uYoKCjLy8v29vbZ2dmrq6thYWHR0dEGBgavr69mZmZAQECRkZGhoaFOTk5aWlqBgYEjIyOLi4sdHR15eXmXl5cXFxc5OTnExMRJSUm+vr4vLy+pVZ5mAAAFfklEQVRogdVb55azOgwMxbQAAVJoIeH9n/LGCSwYSy7YnO/c+UuWwZYljWTt6fS/QeST9F1VXVd2XVW9U+JHh1PGyd0t+sxZI+sL957Eh5HH+eXp4Hhe8vgA0u4q4Jxx7axS+/lNgfSHc+5bYiVloMxKEZTEBmurRfpDa8rs1TtYKWrPhLbayUpR7WYNRW4jxzPcxRrtMSyLdkcsSQtjWscpUl3aKpO/VQGZnpU98z2e0WocbKISE1VxVfbl+GGR1nEeijE7tcpKoXS6Buu0jjP8G1rHkYaQ8BBaJ5NsteUjtSAQHi7fRpCCUQjkQHQ+jPYjRPBgvTfZqqHGaN/bX2Z9v5ulb7gI/0aMy5F8IlycvHaQujkB4k8Pm5gLyq/J6ole/n/N6xq3T64QbcK9YMlhqavM2i4OU3IPE57W4xPuOpHEaszu2k1j/jmfFIH3sj/4EyDBub1XQxgTQuJwqO7tedbXxSYcAruxpQWSULH5SdQ1j0s5EP6bPTKUl0fTbT2UMzCfmoBMf+feT0QliM/nd2APb+wvONd1wEOgCUh+M04cQcImN+bNgbde18aAlnsQL7NgsMw032c+JDiMhWFFVRrzwnlmOdJwTLgJ3qgGuFp358cEyTrGvPBr+9nhQDM4CmJMAkyrzQcHqw7QRK0ITEZMaSnGSjDtYm4DrADIfskDK+r3F+wzxG9GxJwreakKkOR5oc94efPF06gxMsGDlUpD8wtSmJhHKwrEVaindPBy7bQ5I3jB3efR5cDlYgumBgbNG9hqMvpgj7H/mB79IDuAt9NDnNvWNmMbncK52bHXRgbErEM1Bfg9L3tN+wiscxI4eJun3gVgEq7hKHm2yAsSXE5ghW8jNs8AY3RxAv3LNPOuARoyODX/hLeBwxVXPhkAbLH2J1Bs2AtXSMDKYN7D/SiD9/lw3v4ENuiuFuMVqFYfUG1sMQ1iiXCE48bheaFA1KRCw1gRsHw7I6LengPfwffXSF5+WeOFi6AEyfvWDAyb95P3kSLGvOj+ge/ZfZEius5OuYAWDLRvh3T2kaatJsCGDQ0baO1kR3LAKvarK+A6xbzap8AqYFqnYN2AbXtyD7AxCLomH7u66YxpscbJ4xv+0c6yqQ8jvjvLRnR4oDGbhohB6Ubx6zOgfRVnNCGO0WmTqa+C9pFkt2tCpPiN33y9gYTo1ZZoI0Li4xdzo5eghqAft6eLJZz8WI6N+K7krLvZoXh6aSmCVmGlyf0orDefe9OIXdEgG0pYbeASRsffHyebwzjWg8IUXeQPd+nM1LomWImg6RaFcLprvJV5iM3wRT4Z8voKitMN1tJtLXKnoZoIFEZNA2/5uxGdzTVuzIev8+Q4vRpUmljQVr463ihVhuSX8yOghMH1nuIN/bbiI8zT34qB7Im7FKIstuAiL2PO0YM3r0FpUb3Egr/7YwvDybe3PSBRO01lJq4H/o4tKH477W+IRZFLZawHLH+YhsBUAXusMBOFjkhOC1c/HhNqJmeK8r+DGrjicCk1cIBockbh/UXv6F27bltXg6wmlnoS+tlrHSab5OEhG3YRHMq1ibV7dpLJA1FpyzQjdO9/xbzilom3ziiaJZKQd5TUeYzmKbXaOiJeuSRmxPaoM0Qt4lWQSqycbm5JGMbkk9fjdBBvPM6bKSk0YNateY50/8VtS5RXdYAyxiKA2LUw3kJZjxJEiO5a702n2IG7Tnt4gYwrAli6insPIK/28AlkZG1eddOuwAsIXd6dRV28lTnidviW97W/iM2fu3mfRmNFfrcWIeA8IMgbdKadc1ItKUq83iV5j5WN/1Dx/uYnxddZc4n/TOz0Nj9yIGzpdkvaLIR+XtCGVv/xys+7SmYyv+qs/fPRUfgPj/FBz+hcdqUAAAAASUVORK5CYII=" alt="Partner 2 Logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC10lEQVR4AcVXxZLbQBDV2Sd/hUtn/4yX0RBmuIWPiW5hZmZmZjjtKcy4ZCZJnX7KaGFKI3PlVXV5PE1vuKVVi7ZYMhiJJrsiseSOtmjyBbeHuc+MsKDN8oplB/+HTVBrDpA4pXOiXZw0x22qUmC7C751J+ZRBDipwb8lBK1PHF+DJVDrqENt0dQQgjRDeBBDLKHqkkdT4Tasr3BuIgnEDFceeazJySUSyploizprrp725i5HwIuAIRu3kIQhn3G9rcrd3jcnRQPz5H70sW5ulQSiyRKT0KeOfpefQ2JRmg6eKNCb9yZZlk1PX5Vo7YYsGZtzjqD9jPuggw1s4VNhFnZpALMJ+l0y0QUpGk9ZVCvGkxZ8/WYhh9wg0OXH9NrtItUJ+FZaii4Q2KEymLM8TeWyTXUCvojhR2AHCLxSGZy9XKAGgRh+++AFCCgvnuERi2T8+mNRNmeTjGzWdnQy/nAMnxkYBgHTS7lkZYZknLlU+Hfk5qfo63eTXKA9yH3QwUYGYikImFqbgsCm3TmSMXvZ5HoeOzOZCG23HzYyNu3KeRJAbuUSnLxQIBnr+Ly7+nuPS+QCbbcfd4KMk+cLvkvwwkt51eP4jYxatOdwni7dKJJt2+QC7cvcBx1sZCCWgsAr5TG8fqdITQJiKY+h8iI6JS1BvmDT3UclyudtUgE62MB2CrCcqmPYpbyKOxMpOnyqMC3Ypy8mLV2VoTXrs850n75YgDjttdy3jHWfv5rTCB06WaCOhGfyHArdio9RYnEaR8u52z98MkUwb4Huw2eTxtgWxOK+D5J4jAQBHU8kFH7BxVn3FdjAtnKxmtT/W0HSJhck4lkOsLS+JEMOr5JMkAihcGwZgaiiKJWWItyKylh8yqnLcnkmmrkciMWiHLmyTGcng39LDSQuic+7gFYfRMUcre3jFLbCR9eaBXFjduH+5t9XLMNOLcGCNssLoetiqfrz/C+xqsDlSf0bLQAAAABJRU5ErkJggg==" alt="Partner 2 Logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAjVBMVEVHcEzNZoO1bKVfhtW8a5uYhairb7TQZ37KbIfbaG3gcmbvkE/DapGlcLvIaYrVaHaob7hkhdTVcndEkdvlfF6Qdcxzf9JIjtlDkNqQdc1NjNg6lNyYc8ylcL2sbrNrgdOybaqFec95fdCOds6gccRchtVPi9dGj9osmt+4bKHCapLHaYrlfV7VZXYhn+L/FvEaAAAAG3RSTlMAA7I9/RtB/TT+28tehNis2VqYhl5ny6Lm5HMEClr8AAABJklEQVQ4jX2T65aCIBSF8Y5ZmtVMzSCEiTe03v/xBjF1QmT/cbW+zT5bPAGwCAYJMMmKOw5NBsjd1jYZ7JYSbBkmDJwdDAGUsKwothtInj++N7jXEjzw+/2sP+/SNy/Lq6bfibdigORVVd8cJT15diKADQFlVdcIoVv6D0d9GHRywkOeR1L172SIemHgQ8UxAKFGCNWVoxjYZGia16sREd4UcdnpDFdvaWHBWB2xugv4UVJ7Vfbymo6OA+s4ligrT8uFxqsu0y0OfPz5MZ0vzZAiXwrkq9XYY5b9zL/SIlttl1iZOdbLGCa+YjhQMhdiGBPq7hUHfO+0f8SE0NblXaBaRtmUjvgZ7rQG4MecdwO/6LnQKdg+LmUloZELR98b/8liSCQff87lJ3iY/klyAAAAAElFTkSuQmCC" alt="Partner 2 Logo">
+        </div>
+        <div class="testimonial">
+            <h3>What Our Partners Say</h3>
+            <p>"Working with illegal.USA has been a game-changer for our clients. Their expertise in immigration matters is unparalleled."</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}

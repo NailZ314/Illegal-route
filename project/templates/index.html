@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <style>
+        .main-content {
+            text-align: center;
+            padding: 20px;
+            background-image: url('https://static.tildacdn.com/tild3338-3066-4462-a364-363138383061/noroot.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            height: 94vh;
+        }
+        .content-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: left;
+        }
+        .main-content h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .main-content p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .animated-text {
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        @keyframes blink-caret {
+            from,
+            to {
+                border-right-color: #333;
+            }
+            50% {
+                border-right-color: transparent;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="main-content">
+        <div class="content-box">
+            <h1>How to get to the USA</h1>
+            <p>Illegal immigrant</p>
+            <div class="animated-text">
+                <p>Where are illegal aliens going inside the U.S.?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <div class="container"><hr></div>
+            <p>
+                The last refuge of those who dream of a better life.
+                There are, of course, advantages to "moving to the USA" (if your life in Russia was not fun at all).
+                But there are much more minuses, and the main one, in my opinion, is that you cannot start a new life in a society that (as you hope)
+                lives according to the laws by willfully breaking them.
+            </p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
